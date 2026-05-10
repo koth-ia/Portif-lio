@@ -1,0 +1,513 @@
+/* =====================================================
+   PORTFÓLIO PREMIUM - OTIMIZADO FINAL
+===================================================== */
+
+/* =======================
+   VARIÁVEIS
+======================= */
+:root{
+    --primary:#5f63ff;
+    --bg:#05070d;
+    --card:#0d111a;
+    --text:#ffffff;
+    --text-light:#d7d7d7;
+    --transition:.3s ease;
+}
+
+/* =======================
+   RESET
+======================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* =======================
+   GRID BACKGROUND
+======================= */
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+
+    background-size:60px 60px;
+}
+
+/* =======================
+   HEADER
+======================= */
+.header{
+    width:100%;
+    height:90px;
+
+    padding:0 70px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+
+    background:rgba(5,7,13,.82);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    transition:
+    transform .4s ease,
+    background var(--transition);
+
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:42px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:38px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:var(--text);
+    font-size:18px;
+    transition:var(--transition);
+}
+
+.menu a:hover{
+    color:var(--primary);
+}
+
+.btn-nav{
+    padding:11px 24px;
+    border:1px solid var(--primary);
+    border-radius:12px;
+}
+
+/* =======================
+   HERO
+======================= */
+.hero{
+    height:100vh;
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+    padding-left:90px;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,.98) 18%,
+        rgba(0,0,0,.93) 32%,
+        rgba(0,0,0,.78) 48%,
+        rgba(0,0,0,.42) 66%,
+        rgba(0,0,0,.12) 82%,
+        rgba(0,0,0,0) 100%
+    ),
+
+    url('IMAGEMOFICIAl.png');
+
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-color:var(--bg);
+}
+
+/* =======================
+   TEXTO HERO
+======================= */
+.hero-left{
+    position:relative;
+    z-index:5;
+
+    max-width:700px;
+
+    margin-top:-55px;
+
+    text-shadow:
+    0 5px 20px rgba(0,0,0,.55),
+    0 2px 8px rgba(0,0,0,.8);
+}
+
+.hello{
+    font-size:30px;
+    color:var(--text-light);
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:clamp(52px,8vw,105px);
+    font-weight:900;
+    line-height:1;
+    margin-bottom:18px;
+    letter-spacing:-2px;
+}
+
+.hero h1 span{
+    color:var(--primary);
+}
+
+.hero h2{
+    font-size:clamp(22px,4vw,34px);
+    font-weight:400;
+    color:#e5e5e5;
+    margin-bottom:28px;
+}
+
+.desc{
+    font-size:clamp(18px,2vw,23px);
+    line-height:1.7;
+    color:#cfcfcf;
+    max-width:580px;
+    margin-bottom:42px;
+}
+
+/* =======================
+   BOTÃO
+======================= */
+.btn-main{
+    display:inline-flex;
+    align-items:center;
+    gap:15px;
+
+    text-decoration:none;
+    color:var(--text);
+
+    background:var(--primary);
+
+    padding:18px 34px;
+
+    border-radius:12px;
+
+    font-size:24px;
+    font-weight:600;
+
+    box-shadow:
+    0 10px 30px rgba(95,99,255,.35);
+
+    transition:var(--transition);
+}
+
+.btn-main:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 40px rgba(95,99,255,.45);
+}
+
+/* =======================
+   REDES SOCIAIS
+======================= */
+.social{
+    display:flex;
+    gap:28px;
+    margin-top:45px;
+    font-size:34px;
+}
+
+.social a{
+    color:var(--text);
+    transition:var(--transition);
+}
+
+.social a:hover{
+    color:var(--primary);
+    transform:translateY(-4px);
+}
+
+/* =======================
+   SEÇÕES
+======================= */
+section{
+    padding:110px 70px;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+.icon-title{
+    display:block;
+    text-align:center;
+    font-size:40px;
+    color:var(--primary);
+    margin-bottom:18px;
+}
+
+section h2{
+    text-align:center;
+    font-size:clamp(40px,6vw,64px);
+    margin-bottom:20px;
+}
+
+.line{
+    width:72px;
+    height:4px;
+    border-radius:20px;
+    background:var(--primary);
+    margin:0 auto 32px;
+}
+
+section p{
+    text-align:center;
+    font-size:clamp(18px,3vw,30px);
+    color:var(--text-light);
+    margin-bottom:12px;
+}
+
+/* =======================
+   CARDS
+======================= */
+.cards{
+    margin-top:55px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:28px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:18px;
+    padding:36px;
+
+    text-align:center;
+
+    transition:var(--transition);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 22px rgba(95,99,255,.18);
+}
+
+.card i{
+    font-size:62px;
+    margin-bottom:20px;
+}
+
+.card span{
+    display:block;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.html{color:#ff6a00;}
+.css{color:#2aa8ff;}
+.js{color:#ffd000;}
+.py{color:#ffe36b;}
+.git{color:#fff;}
+
+.bar{
+    width:100%;
+    height:8px;
+    background:#1d2130;
+    border-radius:30px;
+}
+
+.bar div{
+    width:80%;
+    height:100%;
+    background:var(--primary);
+    border-radius:30px;
+}
+
+/* =======================
+   SOFT SKILLS
+======================= */
+.softskills .card i{
+    color:var(--primary);
+    font-size:58px;
+}
+
+/* =======================
+   PROJETOS
+======================= */
+.grid{
+    margin-top:55px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:28px;
+}
+
+.projeto{
+    background:var(--card);
+    border-radius:18px;
+    overflow:hidden;
+    transition:var(--transition);
+}
+
+.projeto:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(95,99,255,.14);
+}
+
+.projeto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.txt{
+    padding:25px;
+}
+
+.txt h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.txt p{
+    text-align:left;
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.txt a{
+    display:inline-block;
+    text-decoration:none;
+    color:var(--text);
+
+    border:1px solid var(--primary);
+    border-radius:10px;
+
+    padding:12px 20px;
+
+    transition:var(--transition);
+}
+
+.txt a:hover{
+    background:var(--primary);
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer{
+    text-align:center;
+    padding:35px;
+    color:#9e9e9e;
+    font-size:20px;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+/* =======================
+   BOTÃO TOPO
+======================= */
+.topo{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+
+    width:58px;
+    height:58px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:var(--text);
+
+    background:#11131b;
+    border:1px solid var(--primary);
+    border-radius:14px;
+
+    font-size:24px;
+
+    transition:var(--transition);
+}
+
+.topo:hover{
+    transform:translateY(-4px);
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
+@media(max-width:1100px){
+
+.hero{
+    background-size:85%;
+}
+
+}
+
+@media(max-width:900px){
+
+.header{
+    padding:0 30px;
+}
+
+.menu{
+    display:none;
+}
+
+.hero{
+    padding:40px;
+    justify-content:center;
+    text-align:center;
+
+    background-size:cover;
+    background-position:center top;
+}
+
+.hero-left{
+    margin-top:0;
+    max-width:100%;
+}
+
+.social{
+    justify-content:center;
+}
+
+section{
+    padding:90px 30px;
+}
+
+}
+
+@media(max-width:500px){
+
+.btn-main{
+    font-size:18px;
+    padding:15px 24px;
+}
+
+}
