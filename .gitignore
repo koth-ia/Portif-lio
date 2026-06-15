@@ -1,0 +1,22 @@
+# Configurações do VS Code
+.vscode/
+
+# Configurações do IntelliJ/WebStorm
+.idea/
+*.iml
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+
+# Variáveis de ambiente
+.env
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.inis
